@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- Application -->
+  <data name="AppTitle" xml:space="preserve">
+    <value>AlreadyEdge</value>
+  </data>
+  
+  <!-- Main Window -->
+  <data name="GroupBackdrop" xml:space="preserve">
+    <value>背景效果</value>
+  </data>
+  <data name="RadioMica" xml:space="preserve">
+    <value>云母 (Mica)</value>
+  </data>
+  <data name="RadioAcrylic" xml:space="preserve">
+    <value>亚克力 (Acrylic)</value>
+  </data>
+  <data name="RadioMicaAlt" xml:space="preserve">
+    <value>云母变体 (Mica Alt)</value>
+  </data>
+  <data name="RadioNone" xml:space="preserve">
+    <value>无效果</value>
+  </data>
+  
+  <!-- Settings -->
+  <data name="GroupSettings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="CheckDarkMode" xml:space="preserve">
+    <value>使用深色模式</value>
+  </data>
+  <data name="CheckAutoApply" xml:space="preserve">
+    <value>自动应用到新窗口</value>
+  </data>
+  <data name="CheckStartWithWindows" xml:space="preserve">
+    <value>开机自启动</value>
+  </data>
+  <data name="CheckRunInBackground" xml:space="preserve">
+    <value>窗口关闭时保持监控</value>
+  </data>
+  
+  <!-- Edge Launch Options -->
+  <data name="GroupEdgeLaunch" xml:space="preserve">
+    <value>Edge 启动选项</value>
+  </data>
+  <data name="CheckDisableGpu" xml:space="preserve">
+    <value>禁用 GPU 加速</value>
+  </data>
+  <data name="CheckDisableGpuCompositing" xml:space="preserve">
+    <value>禁用 GPU 合成</value>
+  </data>
+  <data name="CheckTransparentVisuals" xml:space="preserve">
+    <value>启用透明视觉效果</value>
+  </data>
+  <data name="ButtonLaunchEdge" xml:space="preserve">
+    <value>启动 Edge</value>
+  </data>
+  
+  <!-- Actions -->
+  <data name="ButtonStart" xml:space="preserve">
+    <value>开始监控</value>
+  </data>
+  <data name="ButtonStop" xml:space="preserve">
+    <value>停止监控</value>
+  </data>
+  <data name="ButtonApplyNow" xml:space="preserve">
+    <value>立即应用</value>
+  </data>
+  
+  <!-- Language -->
+  <data name="GroupLanguage" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="LabelLanguage" xml:space="preserve">
+    <value>选择语言：</value>
+  </data>
+  
+  <!-- Status -->
+  <data name="StatusReady" xml:space="preserve">
+    <value>就绪</value>
+  </data>
+  <data name="StatusMonitoring" xml:space="preserve">
+    <value>正在监控 Edge 窗口...</value>
+  </data>
+  <data name="StatusApplied" xml:space="preserve">
+    <value>已应用到 {0} 个窗口</value>
+  </data>
+  <data name="StatusStopped" xml:space="preserve">
+    <value>监控已停止</value>
+  </data>
+  
+  <!-- Tooltips -->
+  <data name="TooltipMica" xml:space="preserve">
+    <value>微妙的壁纸采样（原生 Windows 11 设计）</value>
+  </data>
+  <data name="TooltipAcrylic" xml:space="preserve">
+    <value>明显的透明加模糊（毛玻璃效果）</value>
+  </data>
+  <data name="TooltipMicaAlt" xml:space="preserve">
+    <value>更深的云母变体（适合多标签窗口）</value>
+  </data>
+  <data name="TooltipDisableGpu" xml:space="preserve">
+    <value>可能降低性能但提高透明兼容性</value>
+  </data>
+  
+  <!-- Tabs -->
+  <data name="TabBasic" xml:space="preserve">
+    <value>基本设置</value>
+  </data>
+  <data name="TabAbout" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  
+  <!-- About Page (DWMBlurGlass style) -->
+  <data name="AboutInfo" xml:space="preserve">
+    <value>作者：@JustKanade</value>
+  </data>
+</root>

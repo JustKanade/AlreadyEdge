@@ -1,0 +1,36 @@
+## Visual Studio / .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+.vs/
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+bld/
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+
+## Visual Studio Code
+.vscode/
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+
+## Windows
+Thumbs.db
+Desktop.ini
+
+## Application
+config.json
+*.log

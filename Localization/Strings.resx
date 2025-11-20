@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- Application -->
+  <data name="AppTitle" xml:space="preserve">
+    <value>AlreadyEdge</value>
+  </data>
+  
+  <!-- Main Window -->
+  <data name="GroupBackdrop" xml:space="preserve">
+    <value>Backdrop Effect</value>
+  </data>
+  <data name="RadioMica" xml:space="preserve">
+    <value>Mica</value>
+  </data>
+  <data name="RadioAcrylic" xml:space="preserve">
+    <value>Acrylic</value>
+  </data>
+  <data name="RadioMicaAlt" xml:space="preserve">
+    <value>Mica Alt</value>
+  </data>
+  <data name="RadioNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  
+  <!-- Settings -->
+  <data name="GroupSettings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="CheckDarkMode" xml:space="preserve">
+    <value>Use dark mode</value>
+  </data>
+  <data name="CheckAutoApply" xml:space="preserve">
+    <value>Auto-apply to new windows</value>
+  </data>
+  <data name="CheckStartWithWindows" xml:space="preserve">
+    <value>Start with Windows</value>
+  </data>
+  <data name="CheckMinimizeToTray" xml:space="preserve">
+    <value>Minimize to system tray</value>
+  </data>
+  
+  <!-- Edge Launch Options -->
+  <data name="GroupEdgeLaunch" xml:space="preserve">
+    <value>Edge Launch Options</value>
+  </data>
+  <data name="CheckDisableGpu" xml:space="preserve">
+    <value>Disable GPU acceleration</value>
+  </data>
+  <data name="CheckDisableGpuCompositing" xml:space="preserve">
+    <value>Disable GPU compositing</value>
+  </data>
+  <data name="CheckTransparentVisuals" xml:space="preserve">
+    <value>Enable transparent visuals</value>
+  </data>
+  <data name="ButtonLaunchEdge" xml:space="preserve">
+    <value>Launch Edge</value>
+  </data>
+  
+  <!-- Actions -->
+  <data name="ButtonStart" xml:space="preserve">
+    <value>Start Monitoring</value>
+  </data>
+  <data name="ButtonStop" xml:space="preserve">
+    <value>Stop Monitoring</value>
+  </data>
+  <data name="ButtonApplyNow" xml:space="preserve">
+    <value>Apply Now</value>
+  </data>
+  
+  <!-- Language -->
+  <data name="GroupLanguage" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LabelLanguage" xml:space="preserve">
+    <value>Select Language:</value>
+  </data>
+  
+  <!-- Status -->
+  <data name="StatusReady" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="StatusMonitoring" xml:space="preserve">
+    <value>Monitoring Edge windows...</value>
+  </data>
+  <data name="StatusApplied" xml:space="preserve">
+    <value>Applied to {0} window(s)</value>
+  </data>
+  <data name="StatusStopped" xml:space="preserve">
+    <value>Monitoring stopped</value>
+  </data>
+  
+  <!-- Tooltips -->
+  <data name="TooltipMica" xml:space="preserve">
+    <value>Subtle wallpaper sampling (native Windows 11 design)</value>
+  </data>
+  <data name="TooltipAcrylic" xml:space="preserve">
+    <value>Visible transparency with blur (frosted glass effect)</value>
+  </data>
+  <data name="TooltipMicaAlt" xml:space="preserve">
+    <value>Darker variant of Mica (for tabbed windows)</value>
+  </data>
+  <data name="TooltipDisableGpu" xml:space="preserve">
+    <value>May reduce performance but improves transparency compatibility</value>
+  </data>
+  
+  <!-- Tabs -->
+  <data name="TabBasic" xml:space="preserve">
+    <value>Basic</value>
+  </data>
+  <data name="TabAbout" xml:space="preserve">
+    <value>About</value>
+  </data>
+  
+  <!-- Background Settings -->
+  <data name="CheckRunInBackground" xml:space="preserve">
+    <value>Keep monitoring when window closed</value>
+  </data>
+  
+  <!-- About Page (DWMBlurGlass style) -->
+  <data name="AboutInfo" xml:space="preserve">
+    <value>Author: @JustKanade</value>
+  </data>
+</root>
