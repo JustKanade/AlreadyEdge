@@ -1,10 +1,15 @@
-# AlreadyEdge
-Added backdrop effects to Microsoft Edge browser on Windows.
+# AlreadyEdge (Compatible with [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass))
+  
+  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0aba4eed-a995-46ba-9a6b-3a1bd5f1f651" width="600px">
+</p>
 
-(Compatible with [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass))
 
 
-
+<p align="center">
+  <strong>Added backdrop effects to Microsoft Edge browser on Windows.</strong>
+</p>
 
 [![license](https://img.shields.io/github/license/JustKanade/AlreadyEdge.svg)](https://opensource.org/licenses/MIT)
 [![GitHub release](https://img.shields.io/github/release/JustKanade/AlreadyEdge.svg)](https://github.com/JustKanade/AlreadyEdge/releases/latest)
@@ -58,12 +63,6 @@ Configuration files are stored in `%AppData%\AlreadyEdge` and can be deleted man
 ## Technical Details
 
 
-
-### Code Conventions
-- **Naming**: camelCase for private fields, PascalCase for public members
-- **Comments**: Concise English documentation
-- **P/Invoke**: Centralized DWM API calls in `DwmManager`
-- **Resource Management**: Proper disposal patterns
 
 ### How It Works
 1. **Window Detection**: Uses `EnumWindows` to find Edge windows by class name `Chrome_WidgetWin_1`
