@@ -1,0 +1,120 @@
+name: Build and Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (e.g., v1.0.0)'
+        required: true
+        default: 'v1.0.0'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        runtime: 
+          - win-x64
+          - win-x86
+          - win-arm64
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v5
+      with:
+        dotnet-version: '9.0.x'
+        
+    - name: Restore dependencies
+      run: dotnet restore
+      
+    - name: Publish Application - ${{ matrix.runtime }}
+      run: |
+        dotnet publish --configuration Release `
+          --runtime ${{ matrix.runtime }} `
+          --self-contained true `
+          -p:PublishSingleFile=true `
+          -p:IncludeNativeLibrariesForSelfExtract=true `
+          -p:EnableCompressionInSingleFile=true `
+          --output ./publish-${{ matrix.runtime }}
+      shell: pwsh
+      
+    - name: Create Release Archive - ${{ matrix.runtime }}
+      run: |
+        $version = "${{ github.event.inputs.version }}"
+        Compress-Archive -Path ./publish-${{ matrix.runtime }}/* `
+          -DestinationPath AlreadyEdge-$version-${{ matrix.runtime }}.zip
+      shell: pwsh
+      
+    - name: Upload Release Archive
+      uses: actions/upload-artifact@v4
+      with:
+        name: AlreadyEdge-${{ matrix.runtime }}
+        path: AlreadyEdge-${{ github.event.inputs.version }}-${{ matrix.runtime }}.zip
+        retention-days: 30
+
+  create-release:
+    needs: build
+    runs-on: windows-latest
+    
+    permissions:
+      contents: write
+      
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Download all artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: ./artifacts
+        
+    - name: Display structure of downloaded files
+      run: ls -R ./artifacts
+      shell: pwsh
+      
+    - name: Create Release Draft
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: ${{ github.event.inputs.version }}
+        name: AlreadyEdge ${{ github.event.inputs.version }}
+        draft: true
+        prerelease: false
+        generate_release_notes: true
+        files: |
+          ./artifacts/**/*.zip
+        body: |
+          ## AlreadyEdge ${{ github.event.inputs.version }}
+          
+          ### 📦 Downloads
+          
+          Choose the appropriate version for your system:
+          
+          - **Windows 64-bit (x64)**: `AlreadyEdge-${{ github.event.inputs.version }}-win-x64.zip` - Recommended for most users
+          - **Windows 32-bit (x86)**: `AlreadyEdge-${{ github.event.inputs.version }}-win-x86.zip` - For older 32-bit systems
+          - **Windows ARM64**: `AlreadyEdge-${{ github.event.inputs.version }}-win-arm64.zip` - For ARM-based Windows devices
+          
+          ### ✨ Features
+          
+          - Acrylic backdrop effect for Microsoft Edge
+          - Dark mode support
+          - Auto-apply to new windows
+          - Background monitoring mode
+          
+          ### 📋 Requirements
+          
+          - Windows 11 (22H2 or later)
+          - Microsoft Edge (any Chromium-based version)
+          - No .NET runtime required (self-contained)
+          
+          ### 🚀 Quick Start
+          
+          1. Download the appropriate ZIP file for your system
+          2. Extract to any location
+          3. Run `AlreadyEdge.exe`
+          
+          For more information, see the [README](https://github.com/JustKanade/AlreadyEdge/blob/main/README.md).
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

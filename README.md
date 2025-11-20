@@ -1,5 +1,8 @@
 # AlreadyEdge
-Add Backdrop effects to Microsoft Edge browser windows.
+Added backdrop effects to Microsoft Edge browser on Windows.
+
+(Compatible with [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass))
+
 
 
 
@@ -69,7 +72,6 @@ Configuration files are stored in `%AppData%\AlreadyEdge` and can be deleted man
 4. **Monitoring**: Timer-based polling to detect new Edge windows and apply effects automatically
 
 ## Known Limitations
-1. **Performance Impact**: GPU acceleration must be disabled for transparency, which reduces Edge's performance.
 2. **Mica Not Supported**: Mica effects render as opaque due to Edge's rendering pipeline.
 4. **Edge Only**: Currently only supports Microsoft Edge browser.
 
@@ -85,7 +87,7 @@ Configuration files are stored in `%AppData%\AlreadyEdge` and can be deleted man
 Inspired by:
 - [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass) - For UI design and project structure inspiration
 
-This is an **independent implementation** - no code was copied from other projects.
+
 
 ## Author
 Created by **[@JustKanade](https://github.com/JustKanade)**
