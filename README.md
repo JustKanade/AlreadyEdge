@@ -2,7 +2,7 @@
   
   
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/0aba4eed-a995-46ba-9a6b-3a1bd5f1f651" width="600px">
+  <img src="https://github.com/JustKanade/AlreadyEdge/blob/main/readme/view.png" width="600px">
 </p>
 
 
